@@ -348,7 +348,7 @@ Data1.0 %>%
   ggplot(aes(x=Year,y=Cantidad,color=Pos))+geom_line(lty=1 ,size=.8)+
   theme_minimal()+scale_y_continuous(labels = scales::comma) + 
   labs(colour="Posición") + transition_reveal(Anios)  +geom_point()+ labs(title = 'Figura 9. Evolución de triples intentados según posición - {as.integer(frame_along)}', x = 'Años', y = 'Cantidad de triples intentados')+ ease_aes('linear')
-
+anim_save("TriplesIntentados.gif")
  
 ```
 
@@ -376,7 +376,8 @@ Data1.0 %>%
   summarize(Cantidad=mean(PF/G))   %>% 
   ggplot(aes(x=Year,y=Cantidad))+geom_line(lty=1 ,size=.8, colour="midnightblue")+
   theme_minimal()  + transition_reveal(AniosF)  +geom_point() + labs(title = 'Figura 10. Evolución del promedio de faltas por partido - {as.integer(frame_along)}', x = 'Años', y = 'Faltas')+ ease_aes('linear')
- 
+  
+anim_save("Faltas.gif")
 
  
  
@@ -388,4 +389,4 @@ Data1.0 %>%
 La NBA ha pasado por un proceso de transición en donde el esquema de juego ha evolucionado y consigo las características físicas necesarias para un jugador en cada posición. De este modo, se han abierto las puertas para que una mayor cantidad de atletas puedan competir en la liga.
 
 
-Para más información sobre los códigos utilizados, acceder a [Github](https://github.com/Eduardovasquezn/NBA-EDA) 
+Para más información sobre los códigos utilizados, acceder a [Github](https://github.com/Eduardovasquezn/NBA-EDA).
